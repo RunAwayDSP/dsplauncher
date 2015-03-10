@@ -139,7 +139,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.ForeColor = System.Drawing.Color.Blue
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "DSP Launcher"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
