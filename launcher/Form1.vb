@@ -4,7 +4,7 @@
         Dim strProgramName As String
         Dim strArgument As String
         strProgramName = TextBox1.Text & "\Windower.exe"
-        strArgument = "-p=test --executable=lol.exe --args=""--server " & TextBox2.Text & " --user " & TextBox3.Text & " --pass " & TextBox4.Text & """"
+        strArgument = "-p=test --executable=xiloader.exe --args=""--server " & TextBox2.Text & " --user " & TextBox3.Text & " --pass " & TextBox4.Text & """"
         Process.Start(strProgramName, strArgument)
     End Sub
     Private Sub TextBox1_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1.KeyUp
