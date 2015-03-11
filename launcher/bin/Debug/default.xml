@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--XML Database.-->
+<Settings>
+  <Test>
+    <Path>C:\Program Files (x86)\Windower4</Path>
+    <Server>oldschool.dspt.info</Server>
+    <User>USER</User>
+    <Pass>PASS</Pass>
+  </Test>
+</Settings>

@@ -28,11 +28,15 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Path = New System.Windows.Forms.TextBox()
+        Me.Server = New System.Windows.Forms.TextBox()
+        Me.User = New System.Windows.Forms.TextBox()
+        Me.Pass = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.loadProfile = New System.Windows.Forms.TextBox()
+        Me.saveProfile = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -77,62 +81,98 @@ Partial Class Form1
         Me.PictureBox1.Image = Global.launcher.My.Resources.Resources.dslogo
         Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(279, 146)
+        Me.PictureBox1.Size = New System.Drawing.Size(346, 146)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox1.TabIndex = 10
         Me.PictureBox1.TabStop = False
         '
-        'TextBox1
+        'Path
         '
-        Me.TextBox1.Location = New System.Drawing.Point(146, 164)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(145, 20)
-        Me.TextBox1.TabIndex = 11
-        Me.TextBox1.Text = "C:\Windower"
+        Me.Path.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Path.Location = New System.Drawing.Point(146, 164)
+        Me.Path.Name = "Path"
+        Me.Path.Size = New System.Drawing.Size(212, 20)
+        Me.Path.TabIndex = 11
         '
-        'TextBox2
+        'Server
         '
-        Me.TextBox2.Location = New System.Drawing.Point(146, 190)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(145, 20)
-        Me.TextBox2.TabIndex = 13
-        Me.TextBox2.Text = "oldschool.dspt.info"
+        Me.Server.Location = New System.Drawing.Point(146, 190)
+        Me.Server.Name = "Server"
+        Me.Server.Size = New System.Drawing.Size(212, 20)
+        Me.Server.TabIndex = 13
         '
-        'TextBox3
+        'User
         '
-        Me.TextBox3.Location = New System.Drawing.Point(146, 216)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(145, 20)
-        Me.TextBox3.TabIndex = 15
-        Me.TextBox3.Text = "USER"
+        Me.User.Location = New System.Drawing.Point(146, 216)
+        Me.User.Name = "User"
+        Me.User.Size = New System.Drawing.Size(212, 20)
+        Me.User.TabIndex = 15
         '
-        'TextBox4
+        'Pass
         '
-        Me.TextBox4.Location = New System.Drawing.Point(146, 242)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(145, 20)
-        Me.TextBox4.TabIndex = 17
-        Me.TextBox4.Text = "PASS"
+        Me.Pass.Location = New System.Drawing.Point(146, 242)
+        Me.Pass.Name = "Pass"
+        Me.Pass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.Pass.Size = New System.Drawing.Size(212, 20)
+        Me.Pass.TabIndex = 17
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 277)
+        Me.Button1.Location = New System.Drawing.Point(12, 268)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(279, 23)
+        Me.Button1.Size = New System.Drawing.Size(346, 23)
         Me.Button1.TabIndex = 18
         Me.Button1.Text = "Launch"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(238, 333)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(119, 23)
+        Me.Button3.TabIndex = 20
+        Me.Button3.Text = "Load Profile"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'loadProfile
+        '
+        Me.loadProfile.Location = New System.Drawing.Point(12, 336)
+        Me.loadProfile.Name = "loadProfile"
+        Me.loadProfile.Size = New System.Drawing.Size(220, 20)
+        Me.loadProfile.TabIndex = 21
+        Me.loadProfile.Text = "default"
+        '
+        'saveProfile
+        '
+        Me.saveProfile.Location = New System.Drawing.Point(12, 307)
+        Me.saveProfile.Name = "saveProfile"
+        Me.saveProfile.Size = New System.Drawing.Size(220, 20)
+        Me.saveProfile.TabIndex = 23
+        Me.saveProfile.Text = "default"
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(238, 304)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(119, 23)
+        Me.Button2.TabIndex = 22
+        Me.Button2.Text = "Save Profile"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(303, 312)
+        Me.ClientSize = New System.Drawing.Size(371, 368)
+        Me.Controls.Add(Me.saveProfile)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.loadProfile)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Pass)
+        Me.Controls.Add(Me.User)
+        Me.Controls.Add(Me.Server)
+        Me.Controls.Add(Me.Path)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -152,10 +192,14 @@ Partial Class Form1
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents Path As System.Windows.Forms.TextBox
+    Friend WithEvents Server As System.Windows.Forms.TextBox
+    Friend WithEvents User As System.Windows.Forms.TextBox
+    Friend WithEvents Pass As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents loadProfile As System.Windows.Forms.TextBox
+    Friend WithEvents saveProfile As System.Windows.Forms.TextBox
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 
 End Class

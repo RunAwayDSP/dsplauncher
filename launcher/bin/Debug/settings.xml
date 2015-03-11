@@ -1,16 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <settings>
+  <autoload>
+    <addon>distance</addon>
+    <addon>enternity</addon>
+    <addon>gametime</addon>
+    <addon>MobCompass</addon>
+    <addon>Silence</addon>
+    <addon>SpeedChecker</addon>
+    <addon>targetinfo</addon>
+    <addon>timestamp</addon>
+    <addon>pointwatch</addon>
+    <plugin>TParty</plugin>
+  </autoload>
   <profile name="">
     <consolekey>Insert</consolekey>
     <windowmode>Window</windowmode>
-    <width>1200</width>
-    <height>600</height>
-    <uiscale>1</uiscale>
-  </profile>
-  <profile name="test">
-    <consolekey>Insert</consolekey>
-    <windowmode>Window</windowmode>
-	<width>1200</width>
+    <width>1026</width>
     <height>600</height>
     <uiscale>1</uiscale>
   </profile>
