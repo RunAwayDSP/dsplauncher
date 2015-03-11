@@ -51,6 +51,7 @@ Public Class Form1
                 End If
 
             End While
+			
 
         End If
     End Sub
@@ -148,6 +149,7 @@ Public Class Form1
                 End If
 
             End While
+			document.Close()
 
         End If
     End Sub
